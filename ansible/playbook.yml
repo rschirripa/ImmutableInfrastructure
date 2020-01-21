@@ -21,19 +21,19 @@
 
     - name: Creates directory
       file: 
-        path: "/var/www/miteshsharma.com"
+        path: "/var/www/raffhashicorp.com"
         state: directory
 
     - name: Copy static files
       copy:
         src: "./files/static_website/"
-        dest: "/var/www/miteshsharma.com/"
+        dest: "/var/www/raffhashicorp.com/"
         mode: 0644
 
     - name: Update static nginx config
       copy: 
         src: "./files/static_website.conf"
-        dest: "/etc/nginx/conf.d/miteshsharma.com.conf"
+        dest: "/etc/nginx/conf.d/raffhashicorp.com.conf"
         mode: 0644
 
     - name: Enable Nginx
